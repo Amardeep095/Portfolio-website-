@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7FFF00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5EDD00;
+}
+
+/* Handwriting font */
+.font-handwriting {
+  font-family: 'JetBrains Mono', monospace;
+  font-style: italic;
+}
+
+/* Grid layout for contributions */
+.grid-cols-52 {
+  grid-template-columns: repeat(52, minmax(0, 1fr));
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neon glow animation */
+@keyframes neonGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px #7FFF00, 0 0 10px #7FFF00, 0 0 15px #7FFF00;
+  }
+  50% {
+    box-shadow: 0 0 10px #7FFF00, 0 0 20px #7FFF00, 0 0 30px #7FFF00;
+  }
+}
+
+.neon-glow {
+  animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Magnetic button effect */
+.magnetic-btn {
+  transition: transform 0.3s ease;
+}
+
+.magnetic-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(45deg, #7FFF00, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.card-hover:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.02);
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+}
+
+/* Focus styles */
+.focus-neon:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(127, 255, 0, 0.3);
+  border-color: #7FFF00;
+}
+
+/* Smooth transitions */
+.smooth-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
