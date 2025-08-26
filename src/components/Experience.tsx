@@ -65,7 +65,7 @@ const Experience = () => {
       id: 4,
       type: "certification",
       title: "Web Development Essentials",
-      organization: "Industry Certification",
+      organization: "",
       location: "Online",
       period: "2023",
       description: "Foundational certification covering essential web development technologies, best practices, and modern development workflows.",
@@ -77,7 +77,7 @@ const Experience = () => {
       ],
       icon: Award,
       color: "from-orange-500 to-red-500",
-      link: "#"
+      link: "https://coursera.org/share/8fcbe7a3afa9acac6cf97b995bcc590d"
     }
   ];
 
