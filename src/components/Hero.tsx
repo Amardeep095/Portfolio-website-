@@ -145,8 +145,8 @@ const Hero = () => {
           className="flex justify-center space-x-6 mb-16"
         >
           {[
-            { Icon: Github, href: "#", label: "GitHub" },
-            { Icon: Linkedin, href: "#", label: "LinkedIn" },
+            { Icon: Github, href: "https://github.com/Amardeep095", label: "GitHub" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/amardeepkumar090/", label: "LinkedIn" },
             { Icon: Mail, href: "#contact", label: "Email" }
           ].map(({ Icon, href, label }) => (
             <motion.a
