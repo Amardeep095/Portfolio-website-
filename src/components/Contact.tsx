@@ -34,14 +34,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "amardeep.kumar@example.com",
-      href: "mailto:amardeep.kumar@example.com"
+      value: "1324Amardeep@gmail.com",
+      href: "mailto:1324Amardeep@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210"
+      value: "+91 7991167574",
+      href: "tel:+91 7991167574"
     },
     {
       icon: MapPin,
@@ -52,10 +52,10 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Github, href: "https://github.com/Amardeep095", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/amardeepkumar090/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/AMARDEEPKU71959", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/amardeep__choudhary__?igsh=aDVmdTlpYmR0NGxn", label: "Instagram" }
   ];
 
   return (
