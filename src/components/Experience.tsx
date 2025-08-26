@@ -210,8 +210,8 @@ const Experience = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[
             { label: "Public Repositories", value: "15+", icon: "📁" },
-            { label: "Contributions", value: "200+", icon: "🔥" },
-            { label: "Languages Used", value: "8+", icon: "💻" }
+            { label: "Contributions", value: "100+", icon: "🔥" },
+            { label: "Languages Used", value: "5+", icon: "💻" }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -227,7 +227,7 @@ const Experience = () => {
 
         <div className="flex justify-center space-x-6 mt-8">
           <motion.a
-            href="https://github.com/amardeepkumar"
+            href="https://github.com/Amardeep095"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ 
@@ -240,7 +240,7 @@ const Experience = () => {
             <ExternalLink size={18} />
           </motion.a>
           <motion.a
-            href="https://linkedin.com/in/amardeepkumar"
+            href="https://www.linkedin.com/in/amardeepkumar090/"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ 
