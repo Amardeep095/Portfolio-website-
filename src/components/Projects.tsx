@@ -48,7 +48,7 @@ const Projects = () => {
       tech: ["React", "Node.js", "MongoDB", "Socket.io"],
       image: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      live: "#",
+      live: "https://system-dash-prince.netlify.app/",
       date: "2023",
       featured: false
     }
