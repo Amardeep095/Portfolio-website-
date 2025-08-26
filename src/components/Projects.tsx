@@ -37,7 +37,7 @@ const Projects = () => {
       tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
       image: "https://images.pexels.com/photos/518244/pexels-photo-518244.jpeg?auto=compress&cs=tinysrgb&w=600",
       github: "#",
-      live: "#",
+      live: "https://amardeep-portfolio-website.netlify.app/",
       date: "2024",
       featured: true
     },
