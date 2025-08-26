@@ -41,7 +41,7 @@ const Experience = () => {
       ],
       icon: Award,
       color: "from-green-500 to-emerald-500",
-      link: "#"
+      link: "https://www.coursera.org/account/accomplishments/records/35QXREOOPATB"
     },
     {
       id: 3,
@@ -59,7 +59,7 @@ const Experience = () => {
       ],
       icon: Award,
       color: "from-purple-500 to-pink-500",
-      link: "#"
+      link: "https://drive.google.com/drive/folders/1ymTjgAP6kj15zbDTigc6VTXE9kNuqO9n?usp=drive_link"
     },
     {
       id: 4,
