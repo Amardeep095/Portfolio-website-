@@ -79,112 +79,88 @@ const Contact = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         {/* Contact Form */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="space-y-8"
-        >
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-4">Send a Message</h3>
-            <p className="text-gray-400">
-              Fill out the form below and I'll get back to you as soon as possible.
-            </p>
-          </div>
+       {/* Contact Form */}
+<motion.div
+  initial={{ opacity: 0, x: -50 }}
+  animate={isInView ? { opacity: 1, x: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="space-y-8"
+>
+  <div>
+    <h3 className="text-3xl font-bold text-white mb-4">Send a Message</h3>
+    <p className="text-gray-400">
+      Fill out the form below and I'll get back to you as soon as possible.
+    </p>
+  </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                whileFocus={{ scale: 1.02 }}
-                className="relative group"
-              >
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
-                  placeholder="Your Name"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </motion.div>
+  {/* Formspree Integration */}
+  <form 
+    action="https://formspree.io/f/mrbagqdy" // <-- replace with your Formspree endpoint
+    method="POST"
+    className="space-y-6"
+  >
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
+        <input
+          type="text"
+          name="name"
+          required
+          className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
+          placeholder="Your Name"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      </motion.div>
 
-              <motion.div
-                whileFocus={{ scale: 1.02 }}
-                className="relative group"
-              >
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
-                  placeholder="Your Email"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-              </motion.div>
-            </div>
+      <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
+        <input
+          type="email"
+          name="email"
+          required
+          className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
+          placeholder="Your Email"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+      </motion.div>
+    </div>
 
-            <motion.div
-              whileFocus={{ scale: 1.02 }}
-              className="relative group"
-            >
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
-                placeholder="Subject"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </motion.div>
+    <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
+      <input
+        type="text"
+        name="subject"
+        required
+        className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300"
+        placeholder="Subject"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+    </motion.div>
 
-            <motion.div
-              whileFocus={{ scale: 1.02 }}
-              className="relative group"
-            >
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300 resize-none"
-                placeholder="Your Message"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </motion.div>
+    <motion.div whileFocus={{ scale: 1.02 }} className="relative group">
+      <textarea
+        name="message"
+        required
+        rows={6}
+        className="w-full bg-gray-900/50 backdrop-blur-lg border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#7FFF00] focus:ring-1 focus:ring-[#7FFF00] transition-all duration-300 resize-none"
+        placeholder="Your Message"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#7FFF00]/10 to-transparent rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+    </motion.div>
 
-            <motion.button
-              type="submit"
-              disabled={isSubmitting}
-              whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              <span className="relative z-10 flex items-center justify-center space-x-2">
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
-                  </>
-                ) : (
-                  <>
-                    <Send size={20} />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </span>
-            </motion.button>
-          </form>
-        </motion.div>
+    <motion.button
+      type="submit"
+      whileHover={{ 
+        scale: 1.05,
+        boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+      }}
+      whileTap={{ scale: 0.95 }}
+      className="w-full bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+    >
+      <span className="relative z-10 flex items-center justify-center space-x-2">
+        <Send size={20} />
+        <span>Send Message</span>
+      </span>
+    </motion.button>
+  </form>
+</motion.div>
 
         {/* Contact Information */}
         <motion.div
