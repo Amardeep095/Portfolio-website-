@@ -1,4 +1,13 @@
 
+## 🧠 About Me
+* 🎓 Computer Science Student (BE - Chandigarh University)
+* 💻 Passionate about Full-Stack Development
+* 🚀 Love building scalable web apps
+* 📚 Strong in Data Structures & Algorithms
+* 🌍 Aiming for global tech opportunities
+
+---
+
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=00FF00&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;MERN+Stack+Enthusiast;DSA+Lover;Building+Cool+Web+Apps" />
 </p>
@@ -9,15 +18,6 @@
 
 ---
 
-## 🧠 About Me
-
-* 🎓 Computer Science Student (BE - Chandigarh University)
-* 💻 Passionate about Full-Stack Development
-* 🚀 Love building scalable web apps
-* 📚 Strong in Data Structures & Algorithms
-* 🌍 Aiming for global tech opportunities
-
----
 
 ## 🌐 Portfolio Preview
 
