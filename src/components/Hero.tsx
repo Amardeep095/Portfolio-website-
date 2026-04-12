@@ -27,9 +27,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center">
       
-      {/* 🔥 FIXED BACKGROUND (no click blocking) */}
+      {/* 🔥 BACKGROUND (no click blocking) */}
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-black via-gray-900 to-black">
         
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(127,255,0,0.1),transparent_50%)]"></div>
@@ -80,33 +80,26 @@ const Hero = () => {
         {/* ROLE */}
         <motion.div variants={itemVariants} className="mb-12">
           <div className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-light tracking-wider">
-            <motion.span className="inline-block mr-4">Developer</motion.span>
+            <span className="inline-block mr-4">Developer</span>
             <span className="text-[#7FFF00]">|</span>
-            <motion.span className="inline-block mx-4">Designer</motion.span>
+            <span className="inline-block mx-4">Designer</span>
             <span className="text-[#7FFF00]">|</span>
-            <motion.span className="inline-block ml-4">Programmer</motion.span>
+            <span className="inline-block ml-4">Programmer</span>
           </div>
 
-          <motion.p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Building scalable, user-centric solutions with modern web technologies and innovative design
-          </motion.p>
+          </p>
         </motion.div>
 
-        {/* 🔥 FIXED BUTTON */}
-        <motion.div variants={itemVariants} className="mb-16">
-          <motion.a
-            href="https://project-desk-livid.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="relative z-50 inline-block bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+      
+        <motion.div variants={itemVariants} className="mb-16 relative z-[9999]">
+          <button
+            onClick={() => window.open("https://project-desk-livid.vercel.app/", "_blank")}
+            className="bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(127,255,0,0.5)] cursor-pointer"
           >
             Explore My Work
-          </motion.a>
+          </button>
         </motion.div>
 
         {/* SOCIAL LINKS */}
