@@ -118,27 +118,26 @@ const Hero = () => {
           </motion.p>
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mb-16"
-        >
-          <motion.button
-            whileHover={{ 
-              scale: 1.05,
-              boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
-          >
-            <span className="relative z-10">Explore My Work</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#5EDD00] to-[#7FFF00]"
-              initial={{ x: '100%' }}
-              whileHover={{ x: 0 }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.button>
-        </motion.div>
+       <motion.a
+  href="https://project-desk-livid.vercel.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ 
+    scale: 1.05,
+    boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+  }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-block bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group cursor-pointer"
+>
+  <span className="relative z-10">Explore My Work</span>
+
+  <motion.div
+    className="absolute inset-0 bg-gradient-to-r from-[#5EDD00] to-[#7FFF00]"
+    initial={{ x: '100%' }}
+    whileHover={{ x: 0 }}
+    transition={{ duration: 0.3 }}
+  />
+</motion.a>
 
         <motion.div
           variants={itemVariants}
