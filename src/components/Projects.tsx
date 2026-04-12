@@ -208,20 +208,21 @@ const Projects = () => {
         transition={{ duration: 0.8, delay: 1 }}
         className="text-center mt-20"
       >
-        <a 
+       <a 
   href="https://project-desk-livid.vercel.app/" 
   target="_blank" 
   rel="noopener noreferrer"
 >
-        <motion.button
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-          }}
-          className="bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#7FFF00] hover:text-black transition-all duration-300 relative overflow-hidden group"
-        >
-          <span className="relative z-10">View All Projects</span>
-        </motion.button>
+  <motion.button
+    whileHover={{ 
+      scale: 1.05,
+      boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+    }}
+    className="bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg"
+  >
+    <span className="relative z-10">View All Projects</span>
+  </motion.button>
+</a>
       </motion.div>
     </section>
   );
