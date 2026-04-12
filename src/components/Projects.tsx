@@ -201,12 +201,18 @@ const Projects = () => {
       </div>
 
       {/* View All Projects Button */}
+      
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 1 }}
         className="text-center mt-20"
       >
+        <a 
+  href="https://project-desk-livid.vercel.app/" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
         <motion.button
           whileHover={{ 
             scale: 1.05,
