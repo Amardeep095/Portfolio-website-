@@ -202,27 +202,22 @@ const Projects = () => {
 
       {/* View All Projects Button */}
       
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="text-center mt-20"
-      >
-       <a 
-  href="https://project-desk-livid.vercel.app/" 
-  target="_blank" 
-  rel="noopener noreferrer"
+    <motion.div
+  className="text-center mt-20 relative z-50"
 >
-  <motion.button
+  <motion.a
+    href="https://project-desk-livid.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
     whileHover={{ 
       scale: 1.05,
       boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
     }}
-    className="bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg"
+    className="inline-block bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg cursor-pointer"
   >
-    <span className="relative z-10">View All Projects</span>
-  </motion.button>
-</a>
+    View All Projects
+  </motion.a>
+</motion.div>
       </motion.div>
     </section>
   );
