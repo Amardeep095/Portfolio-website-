@@ -28,10 +28,13 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+      
+      {/* 🔥 FIXED BACKGROUND (no click blocking) */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-black via-gray-900 to-black">
+        
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(127,255,0,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0">
+
+        <div className="absolute inset-0 pointer-events-none">
           {[...Array(100)].map((_, i) => (
             <motion.div
               key={i}
@@ -54,16 +57,15 @@ const Hero = () => {
         </div>
       </div>
 
+      {/* CONTENT */}
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="relative z-10 text-center max-w-4xl mx-auto px-4"
       >
-        <motion.div
-          variants={itemVariants}
-          className="mb-8"
-        >
+        {/* NAME */}
+        <motion.div variants={itemVariants} className="mb-8">
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-4 leading-none">
             <span className="bg-gradient-to-r from-white via-[#7FFF00] to-white bg-clip-text text-transparent">
               AMARDEEP
@@ -75,89 +77,50 @@ const Hero = () => {
           </h1>
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="mb-12"
-        >
+        {/* ROLE */}
+        <motion.div variants={itemVariants} className="mb-12">
           <div className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-light tracking-wider">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="inline-block mr-4"
-            >
-              Developer
-            </motion.span>
+            <motion.span className="inline-block mr-4">Developer</motion.span>
             <span className="text-[#7FFF00]">|</span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.3, duration: 1 }}
-              className="inline-block mx-4"
-            >
-              Designer
-            </motion.span>
+            <motion.span className="inline-block mx-4">Designer</motion.span>
             <span className="text-[#7FFF00]">|</span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.6, duration: 1 }}
-              className="inline-block ml-4"
-            >
-              Programmer
-            </motion.span>
+            <motion.span className="inline-block ml-4">Programmer</motion.span>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 2, duration: 1 }}
-            className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-handwriting"
-          >
+          <motion.p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
             Building scalable, user-centric solutions with modern web technologies and innovative design
           </motion.p>
         </motion.div>
 
-       <motion.a
-  href="https://project-desk-livid.vercel.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  whileHover={{ 
-    scale: 1.05,
-    boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-  }}
-  whileTap={{ scale: 0.95 }}
-  className="inline-block bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 relative overflow-hidden group cursor-pointer"
->
-  <span className="relative z-10">Explore My Work</span>
+        {/* 🔥 FIXED BUTTON */}
+        <motion.div variants={itemVariants} className="mb-16">
+          <motion.a
+            href="https://project-desk-livid.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            className="relative z-50 inline-block bg-gradient-to-r from-[#7FFF00] to-[#5EDD00] text-black px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+          >
+            Explore My Work
+          </motion.a>
+        </motion.div>
 
-  <motion.div
-    className="absolute inset-0 bg-gradient-to-r from-[#5EDD00] to-[#7FFF00]"
-    initial={{ x: '100%' }}
-    whileHover={{ x: 0 }}
-    transition={{ duration: 0.3 }}
-  />
-</motion.a>
-
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-center space-x-6 mb-16"
-        >
+        {/* SOCIAL LINKS */}
+        <motion.div variants={itemVariants} className="flex justify-center space-x-6 mb-16">
           {[
-            { Icon: Github, href: "https://github.com/Amardeep095", label: "GitHub" },
-            { Icon: Linkedin, href: "https://www.linkedin.com/in/amardeepkumar090/", label: "LinkedIn" },
-            { Icon: Mail, href: "#contact", label: "Email" }
-          ].map(({ Icon, href, label }) => (
+            { Icon: Github, href: "https://github.com/Amardeep095" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/amardeepkumar090/" },
+            { Icon: Mail, href: "#contact" }
+          ].map(({ Icon, href }, i) => (
             <motion.a
-              key={label}
+              key={i}
               href={href}
-              whileHover={{ 
-                scale: 1.2, 
-                color: '#7FFF00',
-                rotate: 360
-              }}
-              transition={{ duration: 0.3 }}
-              className="text-gray-400 hover:text-[#7FFF00] p-3 rounded-full border border-gray-700 hover:border-[#7FFF00] transition-all duration-300"
+              whileHover={{ scale: 1.2, color: '#7FFF00', rotate: 360 }}
+              className="text-gray-400 hover:text-[#7FFF00] p-3 rounded-full border border-gray-700 hover:border-[#7FFF00]"
             >
               <Icon size={24} />
             </motion.a>
@@ -165,6 +128,7 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
+      {/* SCROLL ICON */}
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
