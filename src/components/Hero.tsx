@@ -47,11 +47,11 @@ const Hero = () => {
         {/* ✅ GUARANTEED WORKING BUTTON */}
         <button
           onClick={() => {
-            window.location.href = "https://project-desk-livid.vercel.app/";
+            window.location.href = "https://project-showcase-umber.vercel.app/";
           }}
           className="bg-[#7FFF00] text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition cursor-pointer"
         >
-          Explore My Work
+          Explore My Work[Click Here]
         </button>
 
       </div>
