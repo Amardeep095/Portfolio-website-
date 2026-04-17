@@ -51,7 +51,7 @@ const Hero = () => {
           }}
           className="bg-[#7FFF00] text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition cursor-pointer"
         >
-          Explore My Work[Click Here]
+          Explore My Work
         </button>
 
       </div>
