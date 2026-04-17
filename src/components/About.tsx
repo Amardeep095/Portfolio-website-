@@ -11,11 +11,11 @@ const About = () => {
 
   const skills = [
     { name: 'C++', level: 60 },
-    { name: 'React.js', level: 70 },
-    { name: 'Node.js', level: 75 },
-    { name: 'MongoDB', level: 80 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'HTML/CSS', level: 90 }
+    { name: 'React.js', level: 68 },
+    { name: 'Node.js', level: 65 },
+    { name: 'MongoDB', level: 70 },
+    { name: 'JavaScript', level: 70 },
+    { name: 'HTML/CSS', level: 80 }
   ];
 
   const achievements = [
