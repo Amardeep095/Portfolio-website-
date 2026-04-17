@@ -47,7 +47,7 @@ const Hero = () => {
         {/* ✅ GUARANTEED WORKING BUTTON */}
         <button
           onClick={() => {
-            window.location.href = "https://project-showcase-umber.vercel.app/";
+            window.location.href = "";
           }}
           className="bg-[#7FFF00] text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition cursor-pointer"
         >
