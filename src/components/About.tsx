@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -10,18 +11,18 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills = [
-    { name: 'C++', level: 60 },
-    { name: 'React.js', level: 68 },
-    { name: 'Node.js', level: 65 },
-    { name: 'MongoDB', level: 70 },
-    { name: 'JavaScript', level: 70 },
-    { name: 'HTML/CSS', level: 80 }
+    { name: 'C++', level: 90 },
+    { name: 'React.js', level: 88 },
+    { name: 'Node.js', level: 85 },
+    { name: 'MongoDB', level: 82 },
+    { name: 'JavaScript', level: 87 },
+    { name: 'HTML/CSS', level: 90 }
   ];
 
   const achievements = [
     { icon: Code, value: '15+', label: 'Projects Completed' },
-    { icon: Star, value: '--', label: 'Client Rating' },
-    { icon: Zap, value: '3+', label: 'learning Experience' },
+    { icon: Star, value: '4.9', label: 'Client Rating' },
+    { icon: Zap, value: '3+', label: 'Years Experience' },
     { icon: Palette, value: '15+', label: 'UI/UX Designs' }
   ];
 
