@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -204,25 +203,23 @@ const Projects = () => {
       {/* View All Projects Button */}
       
     <motion.div
-      className="text-center mt-20 relative z-50"
-    >
-      <motion.a
-        href="https://project-desk-livid.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        whileHover={{ 
-          scale: 1.05,
-          boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-        }}
-        className="inline-block bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg cursor-pointer"
-      >
-        View All Projects
-      </motion.a>
-    </motion.div>
-
+  className="text-center mt-20 relative z-50"
+>
+  <motion.a
+    href="https://project-desk-livid.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ 
+      scale: 1.05,
+      boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+    }}
+    className="inline-block bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg cursor-pointer"
+  >
+    View All Projects
+  </motion.a>
+</motion.div>
     </section>
   );
 };
 
 export default Projects;
-
