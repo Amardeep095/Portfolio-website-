@@ -21,7 +21,7 @@ const About = () => {
   const achievements = [
     { icon: Code, value: '15+', label: 'Projects Completed' },
     { icon: Star, value: '--', label: 'Client Rating' },
-    { icon: Zap, value: '4+', label: 'learning Experience' },
+    { icon: Zap, value: '3+', label: 'learning Experience' },
     { icon: Palette, value: '15+', label: 'UI/UX Designs' }
   ];
 
