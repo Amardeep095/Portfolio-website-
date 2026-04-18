@@ -203,21 +203,21 @@ const Projects = () => {
 
       {/* View All Projects Button */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 1 }}
-        className="text-center mt-20"
-      >
-        <motion.button
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
-          }}
-          className="bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#7FFF00] hover:text-black transition-all duration-300 relative overflow-hidden group"
-        >
-          <span className="relative z-10">View All Projects</span>
-        </motion.button>
-      </motion.div>
+  className="text-center mt-20 relative z-50"
+>
+  <motion.a
+    href="https://project-showcase-umber.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ 
+      scale: 1.05,
+      boxShadow: "0 0 30px rgba(127, 255, 0, 0.5)"
+    }}
+    className="inline-block bg-transparent border-2 border-[#7FFF00] text-[#7FFF00] px-8 py-4 rounded-full font-bold text-lg cursor-pointer"
+  >
+    View All Projects
+  </motion.a>
+</motion.div>
     </section>
   );
 };
