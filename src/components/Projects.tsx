@@ -431,7 +431,7 @@ export default Projects;
   className="text-center mt-20 relative z-50"
 >
   <motion.a
-    href="https://project-desk-livid.vercel.app/"
+    href="https://project-showcase-umber.vercel.app/"
     target="_blank"
     rel="noopener noreferrer"
     whileHover={{ 
