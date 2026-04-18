@@ -425,7 +425,7 @@ export default Projects;
         </div>
       </div>
 
-      {/* View All Projects Button */}
+      {/* View All Projects  Button */}
       
     <motion.div
   className="text-center mt-20 relative z-50"
