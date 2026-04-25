@@ -15,7 +15,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    {
+      name: 'Resume',
+      href: 'https://drive.google.com/file/d/1tAR2ATNwUcx8Me7l4mcCEdskhp17gtou/view?usp=sharing',
+      external: true
+    },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' }
@@ -26,11 +30,15 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/90 backdrop-blur-lg border-b border-[#7FFF00]/20' : 'bg-transparent'
+        scrolled
+          ? 'bg-black/90 backdrop-blur-lg border-b border-[#7FFF00]/20'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
+          
+          {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-to-r from-[#7FFF00] to-white bg-clip-text text-transparent"
@@ -38,11 +46,14 @@ const Navbar = () => {
             Portfolio
           </motion.div>
 
+          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
+                target={item.external ? "_blank" : "_self"}
+                rel={item.external ? "noopener noreferrer" : ""}
                 whileHover={{ scale: 1.1, color: '#7FFF00' }}
                 className="text-white hover:text-[#7FFF00] transition-colors duration-300"
               >
@@ -51,6 +62,7 @@ const Navbar = () => {
             ))}
           </div>
 
+          {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-white hover:text-[#7FFF00] transition-colors"
@@ -71,6 +83,8 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
+              target={item.external ? "_blank" : "_self"}
+              rel={item.external ? "noopener noreferrer" : ""}
               onClick={() => setIsOpen(false)}
               className="block text-white hover:text-[#7FFF00] transition-colors duration-300"
             >
