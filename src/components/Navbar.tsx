@@ -15,14 +15,15 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact', href: '#contact' },
     {
       name: 'Resume',
       href: 'https://drive.google.com/file/d/1tAR2ATNwUcx8Me7l4mcCEdskhp17gtou/view?usp=sharing',
       external: true
-    },
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' }
+    }
   ];
 
   return (
@@ -37,7 +38,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          
+
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -55,7 +56,11 @@ const Navbar = () => {
                 target={item.external ? "_blank" : "_self"}
                 rel={item.external ? "noopener noreferrer" : ""}
                 whileHover={{ scale: 1.1, color: '#7FFF00' }}
-                className="text-white hover:text-[#7FFF00] transition-colors duration-300"
+                className={`transition-colors duration-300 ${
+                  item.external
+                    ? 'text-[#7FFF00] font-semibold'
+                    : 'text-white hover:text-[#7FFF00]'
+                }`}
               >
                 {item.name}
               </motion.a>
@@ -86,7 +91,11 @@ const Navbar = () => {
               target={item.external ? "_blank" : "_self"}
               rel={item.external ? "noopener noreferrer" : ""}
               onClick={() => setIsOpen(false)}
-              className="block text-white hover:text-[#7FFF00] transition-colors duration-300"
+              className={`block transition-colors duration-300 ${
+                item.external
+                  ? 'text-[#7FFF00] font-semibold'
+                  : 'text-white hover:text-[#7FFF00]'
+              }`}
             >
               {item.name}
             </a>
